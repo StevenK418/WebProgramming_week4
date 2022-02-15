@@ -9,15 +9,20 @@ export class MovieService {
 
   movieList =
   [
-    {id: 1, title: 'The Godfather', year: '1972', director: 'Francis Ford Coppola'},
-    {id: 2, title: 'Millers Crossing', year: '1990', director: 'The Coen Brothers'},
-    {id: 3, title: 'Dial M for Murder', year: '1954', director: 'Alfred Hitchcock'},
-    {id: 4, title: 'Whiplash', year: '2014', director: 'Damien Chazelle'}
+    {title: 'The Godfather', year: '1972', director: 'Francis Ford Coppola'},
+    {title: 'Millers Crossing', year: '1990', director: 'The Coen Brothers'},
+    {title: 'Dial M for Murder', year: '1954', director: 'Alfred Hitchcock'},
+    {title: 'Whiplash', year: '2014', director: 'Damien Chazelle'}
   ];
 
   getMovies()
   {
     return this.movieList;
+  }
+
+  addMovie(movieTitle:string, moviedirector:string, movieyear:string)
+  {
+    this.movieList.push({title:movieTitle, director:moviedirector, year:movieyear});
   }
 
   ngOnInit()
